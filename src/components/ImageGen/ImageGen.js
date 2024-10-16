@@ -29,7 +29,7 @@ function ImageGen() {
                 {
                     headers: {
                         "Content-Type": "application/json",
-                        Authorization: `Bearer ${apiKey}`,
+                        Authorization: `Bearer ${process.env.REACT_APP_GPT_KEY}`,
                     },
                 }
             );
