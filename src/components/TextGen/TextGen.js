@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./TextGen.scss";
 import axios from "axios";
 import { FiSearch } from "react-icons/fi";
-import config from "../../config";
+// import config from "../../config";
 import ImageGen from "../ImageGen/ImageGen";
 
-const apiKey = config.OpenAiKey;
+// const apiKey = config.OpenAiKey;
 // const apiKey = 'fordummytest';
 
 function OpenAi() {

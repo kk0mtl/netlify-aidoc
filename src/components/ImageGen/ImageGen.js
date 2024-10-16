@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import axios from "axios";
-import config from "../../config"; // API 키를 가져오는 모듈
+// import config from "../../config"; // API 키를 가져오는 모듈
 import './ImageGen.css'; // 필요한 경우 CSS 파일 포함
 
-const apiKey = config.OpenAiKey; // OpenAI API 키
+// const apiKey = config.OpenAiKey; // OpenAI API 키
 
 function ImageGen() {
     const [prompt, setPrompt] = useState(""); // 기본 프롬프트 입력
@@ -64,7 +64,7 @@ function ImageGen() {
                 {
                     headers: {
                         "Content-Type": "application/json",
-                        Authorization: `Bearer ${apiKey}`,
+                        Authorization: `Bearer ${process.env.REACT_APP_GPT_KEY}`,
                     },
                 }
             );
