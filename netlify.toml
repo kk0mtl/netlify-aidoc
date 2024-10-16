@@ -8,7 +8,8 @@
   to = "https://wordcloud.click/socket.io/:splat"
   status = 200
   force = true
-  
+  headers = { Connection = "Upgrade", Upgrade = "websocket" }
+
 [build]
   publish = "build"
   command = "CI=false npm run build"
