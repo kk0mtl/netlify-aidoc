@@ -3,6 +3,12 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/socket.io/*"
+  to = "https://wordcloud.click/socket.io/:splat"
+  status = 200
+  force = true
+  
 [build]
   publish = "build"
   command = "CI=false npm run build"
