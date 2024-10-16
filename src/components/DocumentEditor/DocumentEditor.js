@@ -97,10 +97,7 @@ function DocumentEditor() {
 
   useEffect(() => {
     const s = io("https://wordcloud.click", {
-      origin: "http://localhost:3030/",
-      headers: {
-        "Access-Control-Allow-Origin": "http://localhost:3030",
-      },
+      withCredentials: true, // CORS 문제 해결
     });
 
     setSocket(s);
