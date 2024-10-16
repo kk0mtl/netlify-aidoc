@@ -16,16 +16,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Registration />} /> */}
+        {/* 비공개 라우트 */}
         <Route element={<PrivateRoutes />}>
-          <Route element={<Dashboard />} path="/dashboard" exact></Route>
-          {/* <Route element={<DocumentEditor/>} path="/documents/:id"></Route> */}
-          <Route path="/documents/:id" element={<DocumentPage />} exact></Route>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/documents/:id" element={<DocumentPage />} />
         </Route>
-        {/* <Route path="/dashboard/:roomId" element={<Dashboard />} /> */}
-        <Route path="/" exact element={<DocumentEditor />} />
-        {/* /        <Route path="/" exact element={<Dashboard />} />/ */}
+        {/* 공개 라우트 */}
+        <Route path="/" element={<DocumentEditor />} />
       </Routes>
     </BrowserRouter>
   );
